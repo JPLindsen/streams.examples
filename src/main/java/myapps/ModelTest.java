@@ -64,10 +64,10 @@ public class ModelTest {
 					JSONObject obj = new JSONObject(value);
 			         
 			        //Getting String values  inside JSONObject obj :
-			        Float AGE = obj.getString("AGE");
-			        Float RACE = obj.getString("RACE");
-			        Float PSA = obj.getString("PSA");
-			        Float GLEASON = obj.getString("GLEASON");
+			        String AGE = obj.getString("AGE");
+			        String RACE = obj.getString("RACE");
+			        String PSA = obj.getString("PSA");
+			        String GLEASON = obj.getString("GLEASON");
 
 			        System.out.println(GLEASON);
 			        
