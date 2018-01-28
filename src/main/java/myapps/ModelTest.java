@@ -20,7 +20,7 @@ public class ModelTest {
 
 	// Name of the generated H2O model
 	//private static String modelClassName = "com.github.megachucky.kafka.streams.machinelearning.models.gbm_pojo_test";
-	private static String modelClassName =  "myapps.models";
+	private static String modelClassName =  "myapps.models.GLM_model_R_1511970560428_1";
 
 	// Prediction Value
 	private static String modelPrediction = "unknown";
@@ -28,11 +28,11 @@ public class ModelTest {
 	public static void main(final String[] args) throws Exception {
 		
 		// Create H2O object (see gbm_pojo_test.java)
-		//hex.genmodel.GenModel rawModel;
-		//rawModel = (hex.genmodel.GenModel) Class.forName(modelClassName).newInstance();
-		//EasyPredictModelWrapper model = new EasyPredictModelWrapper(rawModel);
-		GLM_model_R_1511970560428_1 glmModel = new GLM_model_R_1511970560428_1(); // POJO model
-        EasyPredictModelWrapper model = new EasyPredictModelWrapper(glmModel);
+		hex.genmodel.GenModel rawModel;
+		rawModel = (hex.genmodel.GenModel) Class.forName(modelClassName).newInstance();
+		EasyPredictModelWrapper model = new EasyPredictModelWrapper(rawModel);
+		//GLM_model_R_1511970560428_1 glmModel = new GLM_model_R_1511970560428_1(); // POJO model
+        //EasyPredictModelWrapper model = new EasyPredictModelWrapper(glmModel);
 		
 		// Configure Kafka Streams Application
         Properties props = new Properties();
