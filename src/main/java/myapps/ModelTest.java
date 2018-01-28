@@ -76,15 +76,7 @@ public class ModelTest {
 			        row.put("RACE", RACE);
 			        row.put("PSA", PSA);
 			        row.put("GLEASON", GLEASON);
-			        
-			        //String[] valuesArray = value.split(",");
-
-					//RowData row = new RowData();
-			        //row.put("AGE", valuesArray[0]);
-			        //row.put("RACE", valuesArray[1]);
-			        //row.put("PSA", valuesArray[2]);
-			        //row.put("GLEASON", valuesArray[3]);
-			        
+			        			        
 					BinomialModelPrediction p = null;
 					try {
 						p = model.predictBinomial(row);
@@ -111,7 +103,7 @@ public class ModelTest {
 		);
 
 		// Transform message: Add prediction information
-		KStream<String, Object> transformedMessage = modelInputLines.mapValues(value -> "Prediction: " + modelPrediction);
+		KStream<String, Object> transformedMessage = modelInputLines.mapValues(value -> "{ \"Prediction\": \"" + modelPrediction + "\" }");
 		
 		// Send prediction information to Output Topic
 		transformedMessage.to("ModelOutputTopic");
