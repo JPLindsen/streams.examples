@@ -76,6 +76,7 @@ public class ModelTest {
 
 					modelPrediction = p.label;
 					
+					System.out.println("Label (aka prediction) is: " + p.label);
 					System.out.print("Class probabilities: ");
 					for (int i = 0; i < p.classProbabilities.length; i++) {
 						if (i > 0) {
