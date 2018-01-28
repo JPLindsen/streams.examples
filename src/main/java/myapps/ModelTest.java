@@ -67,7 +67,7 @@ public class ModelTest {
 			        Float PSA = obj.getString("PSA");
 			        Float GLEASON = obj.getString("GLEASON");
 
-			        System.out.print(GLEASON);
+			        System.out.println(GLEASON);
 			        
 			        RowData row = new RowData();
 			        row.put("AGE", AGE);
