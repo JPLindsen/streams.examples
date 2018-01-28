@@ -98,7 +98,7 @@ public class ModelTest {
 		transformedMessage.to("ModelOutputTopic");
 
 		// Start Kafka Streams Application to process new incoming messages from Input Topic
-		final KafkaStreams streams = new KafkaStreams(builder, streamsConfiguration);
+		final KafkaStreams streams = new KafkaStreams(builder, props);
 		streams.cleanUp();
 		streams.start();
 		System.out.println("Model Prediction Microservice is running...");
