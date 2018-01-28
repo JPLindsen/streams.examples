@@ -73,6 +73,8 @@ public class ModelTest {
 			        row.put("PSA", PSA);
 			        row.put("GLEASON", GLEASON);
 			        
+			        System.out.print(GLEASON);
+			        
 			        //String[] valuesArray = value.split(",");
 
 					//RowData row = new RowData();
