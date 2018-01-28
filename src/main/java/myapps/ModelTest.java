@@ -67,13 +67,13 @@ public class ModelTest {
 			        Float PSA = obj.getString("PSA");
 			        Float GLEASON = obj.getString("GLEASON");
 
+			        System.out.print(GLEASON);
+			        
 			        RowData row = new RowData();
 			        row.put("AGE", AGE);
 			        row.put("RACE", RACE);
 			        row.put("PSA", PSA);
 			        row.put("GLEASON", GLEASON);
-			        
-			        System.out.print(GLEASON);
 			        
 			        //String[] valuesArray = value.split(",");
 
