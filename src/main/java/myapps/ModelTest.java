@@ -59,13 +59,27 @@ public class ModelTest {
 					System.out.println("#####################");
 					System.out.println("Input Values:" + value);
 
-					String[] valuesArray = value.split(",");
+					JSONObject obj = new JSONObject(value);
+			         
+			        //Getting String values  inside JSONObject obj :
+			        Float AGE = obj.getString("AGE");
+			        Float RACE = obj.getString("RACE");
+			        Float PSA = obj.getString("PSA");
+			        Float GLEASON = obj.getString("GLEASON");
 
-					RowData row = new RowData();
-			        row.put("AGE", valuesArray[0]);
-			        row.put("RACE", valuesArray[1]);
-			        row.put("PSA", valuesArray[2]);
-			        row.put("GLEASON", valuesArray[3]);
+			        RowData row = new RowData();
+			        row.put("AGE", AGE);
+			        row.put("RACE", RACE);
+			        row.put("PSA", PSA);
+			        row.put("GLEASON", GLEASON);
+			        
+			        //String[] valuesArray = value.split(",");
+
+					//RowData row = new RowData();
+			        //row.put("AGE", valuesArray[0]);
+			        //row.put("RACE", valuesArray[1]);
+			        //row.put("PSA", valuesArray[2]);
+			        //row.put("GLEASON", valuesArray[3]);
 			        
 					BinomialModelPrediction p = null;
 					try {
