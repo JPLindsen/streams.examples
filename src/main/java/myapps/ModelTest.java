@@ -103,7 +103,7 @@ public class ModelTest {
 		);
 
 		// Transform message: Add prediction information
-		KStream<String, Object> transformedMessage = modelInputLines.mapValues(value -> "{ \"Prediction\": \"" + modelPrediction + "\" }");
+		KStream<String, Object> transformedMessage = modelInputLines.mapValues(value -> "{\"Prediction\":\"" + modelPrediction + "\"}");
 		
 		// Send prediction information to Output Topic
 		transformedMessage.to("ModelOutputTopic");
