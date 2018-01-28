@@ -2,6 +2,8 @@ package myapps;
 
 import java.util.Properties;
 
+import org.json.*;
+
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsConfig;
